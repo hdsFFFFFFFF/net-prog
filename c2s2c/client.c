@@ -29,6 +29,8 @@ int main(void)
 	write(clnt_sock, msg, sizeof(msg));
 	read(clnt_sock, buff, sizeof(buff));
 
+	//printf("%d\n", clnt_addr.sin_family);
+	//printf("%d\n", clnt_addr.sin_port);
 	printf("Message from server:%s\n", buff);
 
 	close(clnt_sock);
